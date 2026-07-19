@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Yann-ndani": {
+    "Akim-art": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -56,10 +56,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Yann-ndani:build:production"
+              "buildTarget": "Akim-art:build:production"
             },
             "development": {
-              "buildTarget": "Yann-ndani:build:development"
+              "buildTarget": "Akim-art:build:development"
             }
           },
           "defaultConfiguration": "development"

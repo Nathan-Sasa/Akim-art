@@ -1,0 +1,161 @@
+<section
+    class="w-full relative flex flex-col py-section-y gap-section-y p-main"
+    >
+    <span
+        class="text-center"
+        >
+        <p 
+            appEntryAnim
+            [delay]="100"
+            [threshold]="0.6"
+            [translateY]="50"
+            [speed]="500"
+            class="text-caption opacity-0">
+            cta
+        </p>
+        <h2 
+            appEntryAnim
+            [delay]="200"
+            [threshold]="0.6"
+            [translateY]="50"
+            [speed]="500"
+            class="title-3 opacity-0">
+            Lorem ipsum dolor sit amet.
+        </h2>
+    </span>
+    <div
+        class="w-full grid grid-cols-1 lg:grid-cols-2 gap-sm relative"
+        >
+        <div
+            class="w-full grid grid-cols-2 gap-sm relative"
+            >
+            <div class="col-span-1 card relative max-lg:h-48 overflow-hidden border-clr-text-hover/15! bg-linear-180 from-clr-bg-section/60 to-clr-border-colorr/20 || flex flex-col items-center justify-center gap-md">
+                <p class="text-caption">Lorem ipsum dolor sit.</p>
+                <p class="text-center text-base-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui distinctio debitis vero.</p>
+                <span
+                    class="h-12 w-12 absolute -bottom-4 rounded-full bg-linear-90 from-clr-text-hover blur-[1px]"
+                    >
+                    <!-- float circle -->
+                </span>
+            </div>
+            <div class="col-span-1 card relative max-lg:h-48 overflow-hidden || border-clr-text-hover/15! bg-linear-180 from-clr-bg-section/60 to-clr-border-colorr/30 || flex flex-col items-center justify-center">
+                <p class="text-caption">Lorem, ipsum.</p>
+                <p class="text-base-xs text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <span
+                    class="h-20 w-20 absolute -top-8 right-8 rounded-full bg-linear-180 to-clr-text-hover frorm-clr-bg-container blur-[2px]"
+                    >
+                    <!-- circle float blur -->
+                </span>
+                <span
+                    class="h-12 w-12 absolute top-1 right-2/6 rounded-full bg-linear-90 to-clr-text-hover frorm-clr-bg-container "
+                ></span>
+            </div>
+            <div class="col-span-2 card card-container max-lg:h-66 border-clr-text-hover/15! flex flex-col items-center justify-center pt-section-y">
+                <p class="title-3 font-medium">Super qualité !</p>
+                <p class="text-base-xs text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur doloremque asperiores assumenda omnis?</p>
+            </div>
+        </div>
+        <div
+            class="w-full card border-clr-text-hover/15! bg-clr-bg-container flex flex-col gap-xl"
+            >
+            <div
+                class="w-full"
+                >
+                <h2 class="title-3 text-clr-bg-section!">Contact</h2>
+                <p class="text-base-xs text-clr-bg-section!">Contactez-nous en remplissant ce formulaire qui nous enverra directement le message via whastapp.</p>
+            </div>
+            <div
+                class="w-full relative"
+                >
+                <form 
+                    [formGroup]="contactForm"
+                    (ngSubmit)="submitForm()"
+                    class="w-full fle felx-col gap-md relative"
+                    >
+                    <div
+                        class="w-full grid grid-cols-1 md:grid-cols-2 gap-xl"
+                        >
+                        <fieldset
+                            class="w-full relative flex flex-col"
+                            >
+                            <label 
+                                for="name"
+                                class="label-input"
+                                >
+                                <span>Nom</span>
+                                <input 
+                                    type="text"
+                                    placeholder="ex. John Doe"
+                                    formControlName="name"
+                                    required
+                                    id="name"
+                                    class="input-text"
+                                >
+                            </label>
+                        </fieldset>
+                        <fieldset
+                            class="w-full relative flex flex-col"
+                            >
+                            <label 
+                                for="service"
+                                class="label-input"
+                                >
+                                <span>Service</span>
+                                <input 
+                                    type="text"
+                                    placeholder="ex. Service 1"
+                                    formControlName="service"
+                                    required
+                                    id="service"
+                                    class="input-text"
+                                >
+                            </label>
+                        </fieldset>
+                        <fieldset
+                            class="w-full relative flex flex-col col-span-2"
+                            >
+                            <label 
+                                for="message"
+                                class="label-input"
+                                >
+                                <span>Message</span>
+                                <textarea 
+                                    type="text"
+                                    placeholder="Écrivez votre message."
+                                    formControlName="message"
+                                    rows="6"
+                                    maxlength="200"
+                                    required
+                                    id="message"
+                                    class="input-textarea"
+                                ></textarea>
+                            </label>
+                        </fieldset>
+                        <button
+                            [disabled]="contactForm.invalid"
+                            class="button primary reverse col-span-2"
+                            >
+                            Envoyer
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div
+                class="flex flex-col gap-md w-full relative"
+                >
+                <div
+                    class="flex items-center justify-center gap-md w-full"
+                    >
+                    <span class="h-0.5 w-4/10 bg-clr-border-color"></span>
+                    <p class="text-clr-text-hover">ou</p>
+                    <span class="h-0.5 w-4/10 bg-clr-border-color"></span>
+                </div>
+                <a
+                    class="button secondary reverse"
+                    >
+                    envoyez un mail
+                </a>
+            </div>
+        </div>
+    </div>
+</section>

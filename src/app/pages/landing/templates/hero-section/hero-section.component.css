@@ -1,0 +1,5 @@
+.hero-bg {
+    background: linear-gradient(color-mix(in oklab, var(--color-clr-bg-page) 70%, transparent), var(--color-clr-bg-page)),
+        url('../../../../../../public/assets/images/IMG_2771\ 2.JPG') center/cover no-repeat
+    ;
+}
