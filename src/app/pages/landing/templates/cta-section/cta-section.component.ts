@@ -60,6 +60,6 @@ export class CtaSectionComponent {
 		const onsubmitMessage = `${name} \n ${service} \n \n ${message}`
 		const messageEncoder = encodeURIComponent(onsubmitMessage)
 
-		window.location.href = `https://wa.me/+243825854332?text=${messageEncoder}`
+		window.location.href = `https://wa.me/+243853432565?text=${messageEncoder}`
 	}
 }
