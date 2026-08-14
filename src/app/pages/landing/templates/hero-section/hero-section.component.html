@@ -1,5 +1,5 @@
 <section
-    class="hero-bg w-full h-screen max-h-270 flex flex-col lg:flex-row"
+    class="hero-bg w-full h-screen xl:max-h-270 flex flex-col items-center justify-start lg:flex-row"
     >
     <div
         class="w-full lg:w-2/3 h-auto lg:h-full py-section-y px-main flex flex-col lg:justify-center gap-lg"
@@ -11,9 +11,9 @@
                 [threshold]="0.6"
                 [translateY]="25"
                 [speed]="500"
-                class="title-1 opacity-0"
+                class="title-2 opacity-0"
                 >
-                Akim Art
+                Objetenez Lorem, ipsum dolor.
             </h1>
             <p  
                 appEntryAnim
@@ -21,7 +21,7 @@
                 [threshold]="0.6"
                 [translateY]="5"
                 [speed]="500"
-                class="opacity-0"
+                class="opacity-0 text-clr-text-secondary"
                 >
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, commodi vel alias similique amet officia repellat corporis voluptatem inventore maxime repellendus, dignissimos reprehenderit adipisci molestiae ipsa nobis quae animi? Temporibus!
             </p>
@@ -35,9 +35,10 @@
                 [threshold]="0.6"
                 [translateY]="5"
                 [speed]="500"
-                class="button primary"
+                (click)="getExpertise()"
+                class="button primary opacity-0"
                 >
-                Nos service
+                Nos domaines d'expertise
             </button>
             <button 
                 appEntryAnim
@@ -45,7 +46,7 @@
                 [threshold]="0.6"
                 [translateY]="5"
                 [speed]="500"
-                class="button secondary"
+                class="button secondary opacity-0"
                 >
                 Nous contactez
             </button>

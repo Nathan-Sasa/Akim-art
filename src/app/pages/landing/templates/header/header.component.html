@@ -1,0 +1,81 @@
+<header
+    class="w-full @max-xs:h-[15vh] h-[12vh] md:h-[10vh] fixed top-0 z-20 flex items-center justify-between p-main bg-transparent border-b border-transparent transition-morph duration-300"
+    >
+    <ul
+        appEntryAnim
+        [delay]="200"
+        [threshold]="0.5"
+        [translateY]="50"
+        [speed]="300"
+        class="opacity-0 w-5/10 lg:3/10 flex items-center gap-md"
+        >
+       <li>
+            <img 
+                [ngSrc]="app.logo" 
+                alt=""
+                width="44"
+                height="44"
+                class="rounded-full border border-clr-border-color"
+            >
+       </li> 
+       <li>
+            <h1
+                class="text-base-large font-semibold!"
+                >
+                Akim Service
+            </h1>
+       </li>
+    </ul>
+
+    <nav
+        class="w-5/10 lg:w-7/10 flex items-center justify-end gap-sm md:gap-md lg:gap-xl relative"
+        >
+        <ul
+            class="hidden lg:flex items-center justify-end gap-xl"
+            >
+            <li 
+                appEntryAnim
+                [delay]="200"
+                [threshold]="0.5"
+                [translateY]="50"
+                [speed]="300"
+                (click)="scrollToAboutTag()"
+                class="opacity-0 hover:text-clr-text-hover transition-morph-low duration-200 cursor-pointer"
+                >
+                À propos
+            </li>
+            <li
+                appEntryAnim
+                [delay]="200"
+                [threshold]="0.5"
+                [translateY]="50"
+                [speed]="300"
+                (click)="scrollToServiceTag()"
+                class="opacity-0 hover:text-clr-text-hover transition-morph-low duration-200 cursor-pointer"
+                >
+                Services
+            </li>
+            <li
+                appEntryAnim
+                [delay]="200"
+                [threshold]="0.5"
+                [translateY]="50"
+                [speed]="300"
+                (click)="scrollToRealizationTag()"
+                class="opacity-0 hover:text-clr-text-hover transition-morph-low duration-200 cursor-pointer"
+                >
+                Nos réalisations
+            </li>
+        </ul>
+        <button
+            appEntryAnim
+            [delay]="200"
+            [threshold]="0.5"
+            [translateY]="50"
+            [speed]="300"
+            (click)="scrollToCtaTag()"
+            class="opacity-0 button primary hidden! md:flex! w-fit!">
+            Contactez-nous
+        </button>
+    </nav>
+</header>

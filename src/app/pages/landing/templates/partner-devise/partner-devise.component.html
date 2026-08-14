@@ -1,0 +1,113 @@
+<main
+    class="w-full relative flex flex-col items-center justify-start py-section-y"
+    >
+    <!-- **************************************************** -->
+    <!-- ********************** Partenaire et devise de l'entreprise ********************* -->
+
+    <span
+        appScrollAnim
+        animType="rotate"
+        [rotateDeg]="25"
+        [translateSpeed]="1.1"
+        transformOrigin="left"
+        class="absolute  left-1/2 -translate-x-1/2 w-full text-center"
+        >
+        <h2 class="text-7xl md:text-9xl lg:text-[140px] font-semibold text-clr-text-secondary opacity-5">
+            Collaboration
+        </h2>
+    </span>
+
+
+    <!-- ******************************************************* -->
+    <!-- **************** Partner ****************** -->
+    <section
+        class="flex flex-col gap-xl py-section-y"
+        >
+        <div
+            class="w-full relative flex flex-col lg:flex-row p-main gap-lg"
+            >
+            <div
+                class="w-full lg:w-3/7 flex flex-col items-center"
+                >
+                <span
+                    appScrollAnim
+                    animType="slide-up"
+                    [translateFormY]="120"
+                    class="title-3 font-semibold! text-center text-clr-text-secondary! w-full"
+                    >
+                    ## Nos Partenaires et Clients. ##
+                </span>
+                <i 
+                    appScrollAnim
+                    animType="slide-up"
+                    [translateFormY]="60"
+                    class="pi pi-users text-[164px]! md:text-[200px]! lg:text-[244px]! font-semibold text-clr-text-secondary! opacity-80 mask-b-to-80%"
+                ></i>
+            </div>
+            <div
+                class="w-full lg:w-4/7 flex flex-col gap-lg"
+                >
+                <p 
+                    appScrollAnim
+                    animType="fade"
+                    class="text-justify">
+                    Nous mettons notre savoir-faire au service d'une clientèle variée avec le même niveau d'exigence :
+                </p>
+                <ul
+                class="w-full grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-md"
+                >
+                @for(item of partners; track $index){
+                    <li
+                        appScrollAnim
+                        animType="fadeBt"
+                        class="opacity-0 flex flex-col gap-xs"
+                        >
+                        <span
+                            class="flex items-center gap-sm"
+                            >
+                            <i class="pi pi-qrcode "></i>
+                            <p class="text-[12px]! md:text-[14px] lg:text-[16px] xl:text-lg font-semibold">{{item.name}}</p>
+                        </span>
+                        <span
+                            class="flex items-start gap-md mr-xl"
+                            >
+                            <i class="pi pi-qrcode opacity-0 "></i>
+                            <p class="text-balance text-clr-text-secondary text-[12px]! md:text-[14px] lg:text-[16px] xl:text-[16px!">{{item.text}}</p>
+                        </span>
+                    </li>
+                }
+            </ul>
+            </div>
+        </div>
+        <!-- <div
+            class="w-full relative px-main"
+            >
+            <ul
+                class="w-full grid grid-cols-1 md:grid-cols-1 lg:grid-cols-3 gap-md"
+                >
+                @for(item of partners; track $index){
+                    <li
+                        appScrollAnim
+                        animType="fadeBt"
+                        class="opacity-0 flex flex-col gap-xs"
+                        >
+                        <span
+                            class="flex items-center gap-sm"
+                            >
+                            <i class="pi pi-qrcode "></i>
+                            <p class="text-[12px]! md:text-[14px] lg:text-[16px] xl:text-lg font-semibold">{{item.name}}</p>
+                        </span>
+                        <span
+                            class="flex items-start gap-md mr-xl"
+                            >
+                            <i class="pi pi-qrcode opacity-0 "></i>
+                            <p class="text-justify text-clr-text-secondary text-[12px]! md:text-[14px] lg:text-[16px] xl:text-[16px!">{{item.text}}</p>
+                        </span>
+                    </li>
+                }
+            </ul>
+        </div> -->
+    </section>
+
+
+</main>

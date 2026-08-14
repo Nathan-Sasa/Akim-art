@@ -29,7 +29,13 @@
         <div
             class="w-full grid grid-cols-2 gap-sm relative"
             >
-            <div class="col-span-1 card relative max-lg:h-48 overflow-hidden border-clr-text-hover/15! bg-linear-180 from-clr-bg-section/60 to-clr-border-colorr/20 || flex flex-col items-center justify-center gap-md">
+            <div
+                appEntryAnim
+                [delay]="200"
+                [threshold]="0.3"
+                [translateY]="15"
+                [speed]="500" 
+                class="opacity-0 col-span-1 card relative max-lg:h-48 overflow-hidden border-clr-text-hover/15! bg-linear-180 from-clr-bg-section/60 to-clr-border-colorr/20 || flex flex-col items-center justify-center gap-md">
                 <p class="text-caption">Lorem ipsum dolor sit.</p>
                 <p class="text-center text-base-xs">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui distinctio debitis vero.</p>
                 <span
@@ -38,7 +44,13 @@
                     <!-- float circle -->
                 </span>
             </div>
-            <div class="col-span-1 card relative max-lg:h-48 overflow-hidden || border-clr-text-hover/15! bg-linear-180 from-clr-bg-section/60 to-clr-border-colorr/30 || flex flex-col items-center justify-center">
+            <div 
+                appEntryAnim
+                [delay]="200"
+                [threshold]="0.3"
+                [translateY]="15"
+                [speed]="500" 
+                class="opacity-0 col-span-1 card relative max-lg:h-48 overflow-hidden || border-clr-text-hover/15! bg-linear-180 from-clr-bg-section/60 to-clr-border-colorr/30 || flex flex-col items-center justify-center">
                 <p class="text-caption">Lorem, ipsum.</p>
                 <p class="text-base-xs text-center"> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                 <span
@@ -50,19 +62,44 @@
                     class="h-12 w-12 absolute top-1 right-2/6 rounded-full bg-linear-90 to-clr-text-hover frorm-clr-bg-container "
                 ></span>
             </div>
-            <div class="col-span-2 card card-container max-lg:h-66 border-clr-text-hover/15! flex flex-col items-center justify-center pt-section-y">
+            <div
+                appEntryAnim
+                [delay]="200"
+                [threshold]="0.3"
+                [translateY]="15"
+                [speed]="500" 
+                class="opacity-0 col-span-2 card card-container max-lg:h-66 border-clr-text-hover/15! flex flex-col items-center justify-center pt-section-y">
                 <p class="title-3 font-medium">Super qualité !</p>
                 <p class="text-base-xs text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur doloremque asperiores assumenda omnis?</p>
+                <span
+                    class="w-full flex itme-center justify-center gap-md pt-md"
+                    >
+                    @for (item of media; track $index) {
+                        <a 
+                            [href]="item.link"
+                            target="_blank"
+                            [title]="item.name"
+                            class="border border-transparent rounded-md px-md py-sm bg-clr-bg-page hover:bg-clr-bg-container text-clr-text-secondary! hover:text-clr-bg-page! transition-morph-low duration-200 group"
+                            >
+                            <i class="{{item.icon}} text-2xl! group-"></i>
+                        </a>
+                    }
+                </span>
             </div>
         </div>
         <div
-            class="w-full card border-clr-text-hover/15! bg-clr-bg-container flex flex-col gap-xl"
+            appEntryAnim
+            [delay]="200"
+            [threshold]="0.3"
+            [translateY]="15"
+            [speed]="500" 
+            class="opacity-0 w-full card border-clr-text-hover/15! bg-clr-bg-container flex flex-col gap-xl"
             >
             <div
                 class="w-full"
                 >
-                <h2 class="title-3 text-clr-bg-section!">Contact</h2>
-                <p class="text-base-xs text-clr-bg-section!">Contactez-nous en remplissant ce formulaire qui nous enverra directement le message via whastapp.</p>
+                <h2 class="title-3 text-clr-text-hover!">Contact</h2>
+                <p class="text-base-xs text-clr-text-white!">Contactez-nous en remplissant ce formulaire qui nous enverra directement le message via whastapp.</p>
             </div>
             <div
                 class="w-full relative"
@@ -146,9 +183,9 @@
                 <div
                     class="flex items-center justify-center gap-md w-full"
                     >
-                    <span class="h-0.5 w-4/10 bg-clr-border-color"></span>
+                    <span class="h-0.5 w-4/10 bg-clr-bg-section"></span>
                     <p class="text-clr-text-hover">ou</p>
-                    <span class="h-0.5 w-4/10 bg-clr-border-color"></span>
+                    <span class="h-0.5 w-4/10 bg-clr-bg-section"></span>
                 </div>
                 <a
                     class="button secondary reverse"

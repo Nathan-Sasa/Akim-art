@@ -1,0 +1,188 @@
+<!-- About -->
+<main
+    class="w-full relative flex flex-col items-center justify-start py-section-y min-h-screen"
+    >
+    <!-- **************************************************** -->
+    <!-- ********************** A propos ********************* -->
+    <span
+        appScrollAnim
+        animType="rotate"
+        [rotateDeg]="25"
+        [translateSpeed]="1.1"
+        transformOrigin="left"
+        class="absolute  left-1/2 -translate-x-1/2 w-full text-center"
+        >
+        <h2 class="text-7xl md:text-9xl lg:text-[244px] font-semibold text-clr-text-secondary opacity-5">
+            À propos
+        </h2>
+    </span>
+
+    
+    <!-- ******************************************************* -->
+    <!-- **************** Qui sommes-nous ****************** -->
+    <section
+        class="w-full relative flex flex-col lg:flex-row py-section-y p-main gap-sm md:gap-md lg:gap-lg"
+        >
+        <div
+            class="w-full lg:w-2/5 flex flex-col items-center gap-lg"
+            >
+            <span
+                appScrollAnim
+                animType="slide-up"
+                [translateFormY]="90"
+                class="title-3 font-semibold! text-center text-clr-text-secondary! w-full"
+                >
+                ## Qui sommes-nous ? ##
+            </span>
+            <p
+                class="text-[164px] md:text-[200px] lg:text-[244px] font-semibold text-clr-text-secondary opacity-80 mask-b-to-80%"
+                >
+                ?
+            </p>
+        </div>
+        <span
+            class="w-full lg:w-3/5"
+            >
+            <p 
+                appScrollAnim
+                animType="fade"
+                class="text-justify">
+                Fondée à Kinshasa, AKIM Art est une entreprise générale de construction et d’ingénierie spécialisée dans les travaux publics, l'hydraulique, la conception de projets et leur réalisation globale. De la première esquisse sur plan jusqu'à la livraison finale, nous transformons les visions des donneurs d'ordres publics, des entreprises privées et des particuliers en infrastructures durables, modernes et sécurisées.
+    Notre nom, AKIM Art, incarne notre philosophie : allier la rigueur technique du génie civil à l'art de bâtir avec excellence, pour répondre aux défis majeurs de développement et d'urbanisation de la République Démocratique du Congo.
+            </p>
+        </span>
+    </section>
+    
+
+    <!-- ******************************************************* -->
+    <!-- **************** Domain d'expertise ****************** -->
+    <!-- <section
+        class="flex flex-col gap-xl py-section-y"
+        >
+        <div
+            class="w-full relative flex flex-col-reverse lg:flex-row p-main gap-lg"
+            >
+            <div
+                class="w-full lg:w-4/7 flex flex-col gap-lg"
+                >
+                <p 
+                    appScrollAnim
+                    animType="fade"
+                    class="text-justify">
+                    Grâce à une approche intégrée, AKIM Art prend en charge vos projets de bout en bout à travers quatre grands pôles d'activité
+                </p>
+            </div>
+            <div
+                class="w-full lg:w-3/7 flex flex-col items-center"
+                >
+                <span
+                    appScrollAnim
+                    animType="slide-up"
+                    [translateFormY]="120"
+                    class="title-3 font-semibold! text-center text-clr-text-secondary! w-full"
+                    >
+                    ## Nos Domaines d'Expertise. ##
+                </span>
+                <p
+                    class="text-[164px] md:text-[200px] lg:text-[244px] font-semibold text-clr-text-secondary opacity-80 mask-b-to-80%"
+                    >
+                    !!!
+                </p>
+            </div>
+        </div>
+        <div
+            class="w-full relative px-main"
+            >
+            <ul
+                class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md"
+                >
+                @for(item of expertise; track $index){
+                    <li
+                        appScrollAnim
+                        animType="fadeBt"
+                        class="opacity-0 flex flex-col gap-xs"
+                        >
+                        <span
+                            class="flex items-center gap-sm"
+                            >
+                            <i class="pi pi-qrcode "></i>
+                            <p class="text-[12px]! md:text-[14px] lg:text-[16px] xl:text-lg font-semibold">{{item.name}}</p>
+                        </span>
+                        <span
+                            class="flex items-start gap-md mr-xl"
+                            >
+                            <i class="pi pi-qrcode opacity-0 "></i>
+                            <p class="text-justify text-clr-text-secondary! text-caption">{{item.text}}</p>
+                        </span>
+                    </li>
+                }
+            </ul>
+        </div>
+    </section> -->
+
+
+
+    <!-- ******************************************************* -->
+    <!-- **************** Équipe ****************** -->
+     <section
+        class="w-full relative flex flex-col-reverse lg:flex-row py-section-y p-main gap-lg"
+        >
+        <!-- <div
+            class="w-full lg:w-2/5 flex flex-col items-center gap-lg"
+            >
+            <span
+                appScrollAnim
+                animType="slide-up"
+                [translateFormY]="90"
+                class="title-3 font-semibold! text-center text-clr-text-secondary! w-full"
+                >
+                ## Une Équipe de Techniciens Qualifiés. ##
+            </span>
+            <img 
+                appScrollAnim
+                animType="slide-up"
+                [translateFormY]="50"
+                src="assets/images/about/equipe.webp" 
+                alt="equipe image"
+                loading="lazy"
+                width="256px"
+                height="256px"
+                class="mask-b-from-30%"
+            >
+        </div> -->
+        <span
+            class="w-full lg:w-3/5"
+            >
+            <p 
+                appScrollAnim
+                animType="fade"
+                class="text-justify">
+                La force d'AKIM Art repose sur son capital humain. Notre entreprise s'appuie sur une équipe pluridisciplinaire de techniciens hautement qualifiés, d'ingénieurs civils et d'hydrologues expérimentés.
+Chaque membre de notre équipe technique possède une maîtrise parfaite des réalités du terrain en RDC (nature des sols, gestion des nappes phréatiques, normes d'urbanisme). Grâce à leur présence constante sur site, nos techniciens garantissent une exécution d'une précision absolue, dans le respect strict des règles de sécurité et des cahiers des charges.
+            </p>
+        </span>
+        <div
+            class="w-full lg:w-2/5 flex flex-col items-center gap-lg"
+            >
+            <span
+                appScrollAnim
+                animType="slide-up"
+                [translateFormY]="90"
+                class="title-3 font-semibold! text-center text-clr-text-secondary! w-full"
+                >
+                ## Une Équipe de Techniciens Qualifiés. ##
+            </span>
+            <img 
+                appScrollAnim
+                animType="slide-up"
+                [translateFormY]="50"
+                src="assets/images/about/equipe.webp" 
+                alt="equipe image"
+                loading="lazy"
+                width="256px"
+                height="256px"
+                class="mask-b-from-30%"
+            >
+        </div>
+    </section>
+</main>

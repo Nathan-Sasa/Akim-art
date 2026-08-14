@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "slug": "travaux-publics-et-genie-civil",
+        "name": "Travaux Publics & Génie Civil",
+        "description": "Construction et réhabilitation d'infrastructures routières, de bâtiments institutionnels, de réseaux d'assainissement et d'ouvrages d'art.",
+        "image": "assets/images/IMG_2768.JPG"
+    },
+    {
+        "id": 2,
+        "slug": "conception-&-realisation-de-projets",
+        "name": "Conception & Réalisation de Projets",
+        "description": "Études de faisabilité, modélisation architecturale, gestion rigoureuse des chantiers et pilotage complet des corps de métier.",
+        "image": "assets/images/IMG_2769.JPG"
+    },
+    {
+        "id": 3,
+        "slug": "amenagement-d-habitats",
+        "name": "Aménagement d'Habitats",
+        "description": "Conception, construction et rénovation de logements résidentiels et d'espaces de vie fonctionnels, esthétiques et adaptés au climat local.",
+        "image": "assets/images/IMG_2770.JPG"
+    },
+    {
+        "id": 4,
+        "slug": "hydro-alimentaire-&-forages",
+        "name": "Hydro-alimentaire & Forages",
+        "description": "Expertise spécialisée dans l'accès à l'eau potable, incluant le forage de puits profonds, l'aménagement et la sécurisation des sources d'eau, ainsi que l'installation de réseaux de distribution.",
+        "image": "assets/images/IMG_2771 2.JPG"
+    }
+]

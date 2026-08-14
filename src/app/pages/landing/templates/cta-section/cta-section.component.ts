@@ -50,6 +50,12 @@ export class CtaSectionComponent {
 		})
 	}
 
+	media = [
+		{name:'name', icon: 'pi pi-facebook', link: ''},
+		{name:'twitter', icon: 'pi pi-twitter', link: ''},
+		{name:'tiktok', icon: 'pi pi-tiktok', link: ''}
+	]
+
 	submitForm(): void {
 		if (this.contactForm.invalid) {
 			this.contactForm.markAllAsTouched()
@@ -57,7 +63,7 @@ export class CtaSectionComponent {
 		}
 
 		const  {name, service, message} = this.contactForm.value
-		const onsubmitMessage = `${name} \n ${service} \n \n ${message}`
+		const onsubmitMessage = `${name?.trim()} \n${service?.trim()} \n \n${message}`
 		const messageEncoder = encodeURIComponent(onsubmitMessage)
 
 		window.location.href = `https://wa.me/+243853432565?text=${messageEncoder}`

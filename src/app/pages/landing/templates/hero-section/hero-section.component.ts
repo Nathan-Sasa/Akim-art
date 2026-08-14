@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 import { EntryAnimDirective} from '../../../../shared/directives/entry-anim.directive'
 
 @Component({
@@ -11,4 +11,9 @@ import { EntryAnimDirective} from '../../../../shared/directives/entry-anim.dire
 })
 export class HeroSectionComponent {
 
+	@Output() expertiseEvent = new EventEmitter<void>()
+
+	getExpertise(){
+		this.expertiseEvent.emit()
+	}
 }

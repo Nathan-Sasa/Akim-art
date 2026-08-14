@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "slug": "",
+        "domaine": "travaux-publics-et-genie-civil",
+        "name": "",
+        "description": "",
+        "images": [
+            {
+                "img": ""
+            },
+            {
+                "img": ""
+            },
+            {
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "slug": "deco-et-design-interieur",
+        "domaine": "amenagement-d-habitats",
+        "name": "déco et design intérieur",
+        "description": "",
+        "images": [
+            {
+                "img": ""
+            },
+            {
+                "img": ""
+            },
+            {
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "slug": "",
+        "domaine": "",
+        "name": "",
+        "description": "",
+        "images": [
+            {
+                "img": ""
+            },
+            {
+                "img": ""
+            },
+            {
+                "img": ""
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "slug": "",
+        "domaine": "",
+        "name": "",
+        "description": "",
+        "images": [
+            {
+                "img": ""
+            },
+            {
+                "img": ""
+            },
+            {
+                "img": ""
+            }
+        ]
+    }
+]

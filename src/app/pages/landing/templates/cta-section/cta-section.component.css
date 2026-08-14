@@ -1,5 +1,5 @@
 .card-container{
-    background: linear-gradient(color-mix(in oklab, var(--color-clr-bg-section) 70%, transparent), color-mix(in oklab, var(--color-clr-bg-section) 90%, transparent)),
+    background: linear-gradient(color-mix(in oklab, var(--color-clr-bg-page) 100%, transparent), color-mix(in oklab, var(--color-clr-bg-section) 70%, transparent)),
         url('../../../../../../public/assets/images/IMG_2787.JPG') center/cover no-repeat
     ;
 }
@@ -13,7 +13,7 @@
 
 .label-input span {
     font-size: var(--text-xs);
-    color: var(--color-clr-bg-section) ;
+    color: var(--color-clr-text-white) ;
 
     @media (width >= 20rem /* sm - */) {
         font-size: var(--text-xs-sm);
@@ -29,12 +29,12 @@
 .label-input .input-text{
     height: 32px;
     width: 100%;
-    border: 1px solid var(--color-clr-border-color);
+    border: 1px solid var(--color-clr-bg-section);
     border-radius: var(--spacing-sm);
     padding-inline: var(--spacing-sm);
     outline: none;
     transition: .15s var(--transition-morph-low);
-    color: var(--color-clr-bg-section);
+    color: var(--color-clr-text-white);
     font-size: var(--text-xs);
 
     @media (width >= 20rem /* sm - */) {
@@ -48,25 +48,30 @@
     }
 }
 .label-input input::placeholder {
-    color: var(--color-clr-text-secondary);
+    color: var(--color-clr-bg-section);
     /* font-size: ; */
 }
 
 .label-input .input-text:focus,
 .label-input .input-text:valid{
-    border-color: var(--color-clr-bg-section);
+    border-color: var(--color-clr-text-white);
 }
 
 .label-input .input-textarea {
     width: 100%;
-    border: 1px solid var(--color-clr-border-color);
+    border: 1px solid var(--color-clr-bg-section);
     border-radius: var(--spacing-sm);
     outline: none;
     resize: none;
     padding: var(--spacing-sm);
     transition: .15s var(--transition-morph-low);
-    color: var(--color-clr-bg-section);
+    color: var(--color-clr-text-white);
     font-size: var(--text-xs);
+    
+    &:focus,
+    &:valid {
+        border: 1px solid var(--color-clr-bg-page);
+    }
 
     @media (width >= 20rem /* sm - */) {
         font-size: var(--text-xs-sm);

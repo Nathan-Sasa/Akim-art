@@ -36,7 +36,14 @@
         </p>
     </span>
     <div class="car mt-section-y">
-        <p-tabs value="0">
+        <p-tabs 
+            appEntryAnim
+            [delay]="100"
+            [threshold]="0.2"
+            [translateY]="25"
+            [speed]="300"
+            class="opacity-0"
+            value="0">
             <p-tablist>
                 <p-tab value="0">Service 1</p-tab>
                 <p-tab value="1">Service 2</p-tab>
@@ -80,7 +87,7 @@
                                     class="w-full lg:w-1/2 h-6/10 lg:h-full flex flex-col relative"
                                     >
                                     <div
-                                        class="card w-full h-9/10"
+                                        class="card card-reverse w-full h-9/10"
                                         >
                                         <img 
                                             [src]="item.Image" 
@@ -94,9 +101,9 @@
                                         @for (item of service_1_realizations; track $index; let i = $index) {
                                             <button
                                                 (click)="goToSlideService1(i)"
-                                                class="transition-morph-low duration-300 w-32 h-1 bg-clr-text-secondary cursor-pointer"
+                                                class="transition-morph-low duration-300 w-32 h-1 bg-clr-bg-section/40 cursor-pointer"
                                                 [ngClass]="{
-                                                    'bg-clr-bg-section!': i === currentIndex
+                                                    'bg-clr-bg-page!': i === currentIndex
                                                 }"
                                                 >
                                             </button>
@@ -142,7 +149,7 @@
                                     class="w-full lg:w-1/2 h-6/10 lg:h-full flex flex-col relative"
                                     >
                                     <div
-                                        class="card w-full h-9/10"
+                                        class="card card-reverse w-full h-9/10"
                                         >
                                         <img 
                                             [src]="item.Image" 
@@ -156,9 +163,9 @@
                                         @for (item of service_2_realizations; track $index; let i = $index) {
                                             <button
                                                 (click)="goToSlideService2(i)"
-                                                class="transition-morph-low duration-300 w-43 h-1 bg-clr-text-secondary cursor-pointer"
+                                                class="transition-morph-low duration-300 w-43 h-1 bg-clr-bg-section/40 cursor-pointer"
                                                 [ngClass]="{
-                                                    'bg-clr-bg-section!': i === currentIndex2
+                                                    'bg-clr-bg-page!': i === currentIndex2
                                                 }"
                                                 >
                                             </button>
@@ -205,7 +212,7 @@
                                     class="w-full lg:w-1/2 h-6/10 lg:h-full flex flex-col relative"
                                     >
                                     <div
-                                        class="card w-full h-9/10"
+                                        class="card card-reverse w-full h-9/10"
                                         >
                                         <img 
                                             [src]="item.Image" 
@@ -219,9 +226,9 @@
                                         @for (item of service_3_realizations; track $index; let i = $index) {
                                             <button
                                                 (click)="goToSlideService3(i)"
-                                                class="transition-morph-low duration-300 w-25 h-1 bg-clr-text-secondary cursor-pointer"
+                                                class="transition-morph-low duration-300 w-25 h-1 bg-clr-bg-section/40 cursor-pointer"
                                                 [ngClass]="{
-                                                    'bg-clr-bg-section!': i === currentIndex3
+                                                    'bg-clr-bg-page!': i === currentIndex3
                                                 }"
                                                 >
                                             </button>
@@ -267,7 +274,7 @@
                                     class="w-full lg:w-1/2 h-6/10 lg:h-full flex flex-col relative"
                                     >
                                     <div
-                                        class="card w-full h-9/10"
+                                        class="card card-reverse w-full h-9/10"
                                         >
                                         <img 
                                             [src]="item.Image" 
@@ -281,9 +288,9 @@
                                         @for (item of service_4_realizations; track $index; let i = $index) {
                                             <button
                                                 (click)="goToSlideService4(i)"
-                                                class="transition-morph-low duration-300 w-25 h-1 bg-clr-text-secondary cursor-pointer"
+                                                class="transition-morph-low duration-300 w-25 h-1 bg-clr-bg-section/40 cursor-pointer"
                                                 [ngClass]="{
-                                                    'bg-clr-bg-section!': i === currentIndex4
+                                                    'bg-clr-bg-page!': i === currentIndex4
                                                 }"
                                                 >
                                             </button>

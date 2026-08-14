@@ -1,39 +1,44 @@
-import { Component } from '@angular/core';
+import { Component, DestroyRef, inject, OnInit, signal } from '@angular/core';
 import { EntryAnimDirective } from '../../../../shared/directives/entry-anim.directive';
+import { ScrollAnimDirective } from '../../../../shared/directives/scroll-anim.directive';
+import { IDomaine } from '../../../../core/interfaces/data.interfaces';
+import { DataService } from '../../../../core/services/data.service';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop'
+import { RouterLink } from '@angular/router';
 
 @Component({
 	selector: 'app-services-section',
 	imports: [
-		EntryAnimDirective
+		EntryAnimDirective,
+		ScrollAnimDirective,
+		RouterLink
 	],
 	templateUrl: './services-section.component.html',
 	styleUrl: './services-section.component.css',
 })
-export class ServicesSectionComponent {
+export class ServicesSectionComponent implements OnInit {
 
+	private readonly dataService = inject(DataService)
+	private readonly destroyRef = inject(DestroyRef)
 
-	services = [
-		{
-			name: 'Services 1',
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestias esse natus vero, nemo doloremque animi sequi. Eum minus aperiam deleniti deserunt!',
-			image: 'assets/images/IMG_2768.JPG'
-		},
-		{
-			name: ' Services 2',
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestias esse natus vero, nemo doloremque animi sequi. Eum minus aperiam deleniti deserunt!',
-			image: 'assets/images/IMG_2769.JPG'
-		},
-		{
-			name: 'Services 3',
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestias esse natus vero, nemo doloremque animi sequi. Eum minus aperiam deleniti deserunt!',
-			image: 'assets/images/IMG_2770.JPG'
-		},
-		{
-			name: 'Services 4',
-			description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam molestias esse natus vero, nemo doloremque animi sequi. Eum minus aperiam deleniti deserunt!',
-			image: 'assets/images/IMG_2771 2.JPG'
-		}
-	]
+	protected expertise = signal<IDomaine[] | null>([]) 
+
+	ngOnInit(): void {
+		this.loadExpertiseDomaine()
+	}
+	
+	loadExpertiseDomaine(): void {
+		this.dataService.getDomaineAll()
+			.pipe(takeUntilDestroyed(this.destroyRef))
+			.subscribe({
+				next: (res) => {
+					this.expertise.set(res)
+				},
+				error: (err) => {
+					console.log('expertise error : ', err)
+				}
+			})
+	}
 
 	clauses = [
 		{
