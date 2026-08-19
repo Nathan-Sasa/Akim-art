@@ -58,6 +58,25 @@
                 >
                 @for(item of partners; track $index){
                     <li
+                        class="flex flex-col items-start gap-xl p-main rounded-2xl bg-clr-text/95 lg:bg-clr-text/80 hover:bg-clr-text  group relative overflow-hidden border border-clr-border-color/50! transition-morph-low duration-200 "
+                        >
+                        <span
+                            class=" flex items-center gap-md z-4"
+                            >
+                            <p class="group-hover:text-clr-text-hover text-clr-border-color text-3xl md:text-5xl font-semibold mask-b-from-20% transition-morph-low duration-200">
+                                {{$index + 1}}
+                            </p>
+                            <p class="text-clr-text-white/70 group-hover:text-clr-text-white text-[12px]! md:text-[14px] lg:text-[16px] xl:text-lg font-semibold transition-morph-low duration-200">
+                                {{item.name}}
+                            </p>
+                        </span>
+                        <span
+                            class="text-clr-text-white/70 group-hover:text-clr-text-white text-[12px]! md:text-[14px] lg:text-[16px] text-balance z-4 transition-morph-low duration-200"
+                            >
+                            {{item.text}}
+                        </span>
+                    </li>
+                    <!-- <li
                         appScrollAnim
                         animType="fadeBt"
                         class="opacity-0 flex flex-col gap-xs"
@@ -74,7 +93,7 @@
                             <i class="pi pi-qrcode opacity-0 "></i>
                             <p class="text-balance text-clr-text-secondary text-[12px]! md:text-[14px] lg:text-[16px] xl:text-[16px!">{{item.text}}</p>
                         </span>
-                    </li>
+                    </li> -->
                 }
             </ul>
             </div>

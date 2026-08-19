@@ -9,31 +9,13 @@
         transformOrigin="left"
         class="absolute -top-6 lg:-top-16 left-1/2 -translate-x-1/2 w-full text-center"
         >
-        <h2 class="text-7xl md:text-9xl lg:text-[244px] font-semibold text-clr-text-secondary opacity-5">
-            Services
+        <h2 class="text-6xl md:text-8xl lg:text-[176px] xl:text-[236px] font-semibold text-clr-text-secondary opacity-5">
+            Expertises
         </h2>
     </span>
     <span
         class="text-center flex flex-col items-center justify-center"
         >
-        <!-- <p 
-            appEntryAnim
-            [delay]="100"
-            [threshold]="0.6"
-            [translateY]="50"
-            [speed]="500"
-            class="text-caption opacity-0">
-            ## Nos Domaines d'Expertise. ##
-        </p> -->
-        <!-- <h2 
-            appEntryAnim
-            [delay]="200"
-            [threshold]="0.6"
-            [translateY]="50"
-            [speed]="500"
-            class="title-3 opacity-0">
-            ## Nos Domaines d'Expertise. ##
-        </h2> -->
         <span
             appScrollAnim
             animType="slide-up"
@@ -121,4 +103,19 @@
             }
         </div>
     </div>
+    <!-- <div
+        class="w-full grid grid-cols-1 gap-main py-xl"
+        >
+        <div
+            class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-xl"
+            >
+            @for (item of expertise(); track $index) {
+                <div
+                    class="card h-64 rounded-2xl "
+                    >
+
+                </div>
+            }
+        </div>
+    </div> -->
 </section>

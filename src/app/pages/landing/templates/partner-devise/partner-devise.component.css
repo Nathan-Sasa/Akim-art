@@ -1,0 +1,18 @@
+.partnerCard::before {
+    content: "";
+    position: absolute;
+    background-color: var(--color-clr-bg-page);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 1px;
+    height: 1px;
+    transition: .35s all var(--transition-morph-low);
+    z-index: 0;
+    border-radius: var(--radius-full);
+}
+
+.partnerCard:hover:before {
+    width: 500px;
+    height: 500px;
+}
